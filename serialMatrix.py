@@ -31,5 +31,6 @@ for period in summary:
 
 offTime = now.replace(hour=21, minute=0)
 onTime = now.replace(hour=7, minute=0)
-if((now > offTime) & (now < onTime)):
+if((now > offTime) and (now < onTime)):
+	print('off')
 	dock.write('\nOFF')
