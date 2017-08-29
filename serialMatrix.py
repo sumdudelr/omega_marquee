@@ -30,7 +30,7 @@ for period in summary:
 		dock.write(str(period['detailedForecast']) + "\n")
 
 offTime = now.replace(hour=21, minute=0)
-onTime = now.replace(hour=7, minute=0)
+onTime = offTime + datetime.timedelta(hours=11)
 if((now > offTime) and (now < onTime)):
 	print('off')
 	dock.write('\nOFF')
