@@ -29,12 +29,6 @@ for period in summary:
 	if (datetime.datetime.now(pytz.utc) < endTime) and (datetime.datetime.now(pytz.utc) > startTime):
 		dock.write(str(period['detailedForecast']) + "\n")
 
-offTime = now.replace(hour=21, minute=0)
-if(now.hour > 12):
-	midnight = offTime + datetime.timedelta(hours=3)
-else:
-	midnight = offTime - datetime.timedelta(hours=21)
-onTime = now.replace(hour=7, minute=0)
-if(((now > offTime) and (now < midnight)) or ((now > midnight) and (now < onTime))):
+if((now.hour > 21) or (now.hour < 7)):
 	print('off/')
 	dock.write('\nOFF')
