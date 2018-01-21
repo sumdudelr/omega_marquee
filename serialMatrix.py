@@ -17,7 +17,7 @@ url = "https://api.blockchain.info/stats"
 response = urllib.urlopen(url)
 data = json.loads(response.read())
 # print(data)
-dock.write("BTC = $" + str(data['market_price_usd']) + "   |   ")
+dock.write("BTC = $%(number).2f   |   " % {"number" : data['market_price_usd']})
 
 url2 = "http://api.weather.gov/points/39.1945,-84.0546/forecast"
 response2 = urllib.urlopen(url2)
