@@ -169,5 +169,9 @@ void loop()
   {
     P.displayShutdown(true);
   }
+  else
+  {
+    P.displayShutdown(false);
+  }
 }
 
