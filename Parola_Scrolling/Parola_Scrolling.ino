@@ -70,7 +70,7 @@ uint16_t scrollPause = 0; // in milliseconds
 uint8_t intensity = 1; // brightness (0-15)
 
 // Global message buffers shared by Serial and Scrolling functions
-#define	BUF_SIZE	300
+#define	BUF_SIZE	400
 char curMessage[BUF_SIZE] = { "" };
 char newMessage[BUF_SIZE] = { "Hello! Enter new message?" };
 bool newMessageAvailable = true;
