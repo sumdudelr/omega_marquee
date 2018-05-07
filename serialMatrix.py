@@ -22,7 +22,10 @@ else:
 	# print(data)
 	dock.write("BTC = $%(number).2f   |   " % {"number" : data['market_price_usd']})
 
-	url2 = "http://api.weather.gov/points/39.1945,-84.0546/forecast"
+	# Athens, OH
+	#url2 = "http://api.weather.gov/points/39.3303,-82.0973/forecast"
+	# Batavia, OH
+	url2 = "http://api.weather.gov/points/39.1060,-84.2411/forecast"
 	response2 = urllib.urlopen(url2)
 	forecast = json.loads(response2.read()) 
 	summary = forecast['properties']['periods']
